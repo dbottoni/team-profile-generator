@@ -1,7 +1,6 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const createHTML = require("./src/template");
-const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
@@ -9,9 +8,11 @@ const Manager = require("./lib/Manager");
 
 const teamArray = [];
 
+// WHEN I start the application
+// THEN I am prompted to enter the team manager's name, employee ID, email and office number
 const mgrQuestion = () => {
   return inquirer.prompt([
-{
+  {
       type: 'input',
       name: 'name',
       message: "What is the manager's name?",
@@ -54,7 +55,7 @@ const mgrQuestion = () => {
     {
       type:'input',
       name: 'office',
-      message: 'What is the managers office number?',
+      message: "What is the manager's office number?",
       validate: officeInput => {
         if (officeInput){
           return true;
@@ -64,14 +65,16 @@ const mgrQuestion = () => {
         }
       }
     },
+  ]).then(managerResponse => {
+      const { role, name, id, email, office} = managerResponse;
+      let manager = new Manager(name, id, email, office);
 
-  ])
-
+      teamArray.push(manager);
+})
 }
 
-
-
-// manager question list
+// WHEN I enter the team managers info
+// THEN I am presented with a menu option to add an engirneer or intern or to finish building my team
 const teamQuestion = () => {
   return inquirer.prompt({
       type: 'confirm',
@@ -165,13 +168,10 @@ const teamQuestion = () => {
     ]).then(employeeResponse => {
       const { role, name, id, email, school, github, addEmployee } = employeeResponse;
       let newEmployee;
-
       if(role === "Engineer"){
         newEmployee = new Engineer(name, id, email, github);
-        console.log(newEmployee);
       } else if (role === "Intern"){
         newEmployee = new Intern(name, id, email, school);
-        console.log(newEmployee);
       }
 
       teamArray.push(newEmployee);
@@ -190,10 +190,27 @@ const teamQuestion = () => {
 };
 
 
+const printPage = function(pageHTML){
+  fs.writeFile("./dist/index.html", pageHTML, (err) =>{
+    if(err){
+      console.log(err);
+    } else {
+      console.log("It works!");
+    }
+  });
+};
+
+
 
 mgrQuestion()
 .then(teamQuestion)
-
+.then(teamArray => {
+  return createHTML(teamArray);
+})
+.then((pageHTML) => {
+  printPage(pageHTML);
+  
+})
 .catch(err=>{
   console.log(err);
 });
