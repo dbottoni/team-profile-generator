@@ -17,6 +17,8 @@ https://user-images.githubusercontent.com/72705457/126910798-98e5e97f-e093-4c98-
 
 ### HTML Generated in Walkthrough
 
+![2021-07-25_15-24-21](https://user-images.githubusercontent.com/72705457/126910969-4d1cf0f2-50b9-4f36-82a7-303a69e13512.jpg)
+
 
 ## Installation
 
