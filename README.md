@@ -11,8 +11,13 @@
 A command-line application built using Node.js and Javascript used to dynamically create a team profile page.
 The application allows for the creation of one manager position and unlimited engineers and interns.
 
+### Walkthrough of tests and running the application in the command line
 
 https://user-images.githubusercontent.com/72705457/126910798-98e5e97f-e093-4c98-9e99-096fa90eb722.mp4
+
+### Video shows the functionality of the GitHub and email links executing successfully
+
+https://user-images.githubusercontent.com/72705457/126911064-99809077-1d62-4bcb-ae28-15af7a42bada.mp4
 
 
 ### HTML Generated in Walkthrough
