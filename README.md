@@ -15,6 +15,9 @@ The application allows for the creation of one manager position and unlimited en
 https://user-images.githubusercontent.com/72705457/126910798-98e5e97f-e093-4c98-9e99-096fa90eb722.mp4
 
 
+### HTML Generated in Walkthrough
+
+
 ## Installation
 
 Requires Node.js to run from the command line
