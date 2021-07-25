@@ -166,7 +166,7 @@ const teamQuestion = () => {
       default: false
     }
     ]).then(employeeResponse => {
-      const { role, name, id, email, school, github, addEmployee } = employeeResponse;
+      let { role, name, id, email, school, github, addEmployee } = employeeResponse;
       let newEmployee;
       if(role === "Engineer"){
         newEmployee = new Engineer(name, id, email, github);

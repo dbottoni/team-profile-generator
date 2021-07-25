@@ -5,7 +5,7 @@ test('tests employee info', () => {
   const employee = new Employee('Dana');
 
   expect(employee.name).toBe('Dana');
-  expect(employee.id).toEqual(expect.any(Number));
+  expect(employee.id).toEqual(expect.any(String));
   expect(employee.email).toEqual(expect.any(String));
 });
 

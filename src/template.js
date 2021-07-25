@@ -1,5 +1,5 @@
-
-//functions to write html for each of 3 roles
+// code in template.js created & provided by Ben Gallagher, altered as necessary to fit my project
+// functions to write html for each of 3 roles
 
 const makeManager = function (data) {
   return `
@@ -99,11 +99,18 @@ const genPage = function (pageHtmlEl) {
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
         crossorigin="anonymous"
       />
-      <link rel="stylesheet" href="./style.css" />
+      <style>
+      body {background-color: beige;}
+      header {text-align: center;
+            font-size: 36px;
+              background-image: linear-gradient(to right,rgb(97, 203, 238),rgb(4, 4, 179));
+              color: white;
+              padding: 10px;}
+      </style>
       <title>Profile Generator</title>
     </head>
     <body>
-      <header>My Team</header>
+      <header> My Team </header>
       <div class="container">
           <div class="row" id="page">
           ${pageHtmlEl}

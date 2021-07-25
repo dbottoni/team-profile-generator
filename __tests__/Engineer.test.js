@@ -1,7 +1,7 @@
 const Engineer = require('../lib/Engineer');
 
 
-test('creates engineer object', () => {
+test('create new engineer', () => {
   const engineer = new Engineer('Dana');
 
   expect(engineer.name).toBe('Dana');
@@ -11,7 +11,7 @@ test('creates engineer object', () => {
 });
 
 
-test('creates random engineer object', () => {
+test('check engineer functions', () => {
   const engineer = new Engineer('Dana');
 
   expect(engineer.getInfo()).toHaveProperty('name');
