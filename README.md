@@ -32,6 +32,6 @@ From the command line, running 'NPM RUN TEST' will validate the application is f
 
 ## Contact Info
 
-Please contact me with any questions;
-Github: https:.//github.com/dbottoni
-Email: danabottoni@gmail.com
+### Please contact me with any questions;
+### Github: https:.//github.com/dbottoni
+### Email: danabottoni@gmail.com
